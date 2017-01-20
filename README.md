@@ -45,7 +45,7 @@ Things you may want to cover:
 
 |user_id|group_id|
 |---|---|
-|外部キー制約|外部キー制約||
+|外部キー制約|外部キー制約
 |Not Null制約|Not Null制約|
 |一意性制約|一意性制約|
 
@@ -57,3 +57,26 @@ Things you may want to cover:
 |---|---|---|---|---|---|  
 |Not Null制約|||Not Null制約|Not Null制約|Not Null制約|
 |主キー制約|||||外部キー制約|
+
+####データベース間の関係
+#####users  
+belongs_to: members  
+has_many : messages  
+
+######groups  
+has_many : members  
+
+#####members  
+belongs_to : groups
+has_many : users  
+
+####messages  
+belongs_to : users
+
+
+
+
+
+
+
+
