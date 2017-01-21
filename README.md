@@ -41,7 +41,7 @@ Things you may want to cover:
 |Not Null制約|
 |一意性制約|  
 
-####members  
+####group_user  
 
 |user_id|group_id|
 |---|---|
@@ -49,33 +49,41 @@ Things you may want to cover:
 |Not Null制約|Not Null制約|
 |一意性制約|一意性制約|
 
-
-
 ####messages
 
 |id|text|image|created_at|updated_at|user_id|  
 |---|---|---|---|---|---|  
 |Not Null制約|||Not Null制約|Not Null制約|Not Null制約|
-|主キー制約|||||外部キー制約|
+|主キー制約|||||外部キー制約|  
 
-####データベース間の関係
+
+
+####データベース間の関係  
+
 #####users  
-belongs_to: members  
+has_many : group_user  
+has_many : groups , through: :group_user  
 has_many : messages  
 
 ######groups  
-has_many : members  
+has_many : group_user  
+has_many : users ,through: :group_user  
+has_many : messages
 
-#####members  
-belongs_to : groups
-has_many : users  
+#####group_user  
+belongs_to : groups  
+belongs_to :users  
 
 ####messages  
-belongs_to : users
+belongs_to : users  
+belongs_to : groups  
 
 
 
 
+
+
+ 
 
 
 
