@@ -62,15 +62,15 @@ Things you may want to cover:
 
 #####users  
 has_many : group_user  
-has_many : groups , through: :group_user  
+has_many : groups , through: :group_users  
 has_many : messages  
 
 ######groups  
 has_many : group_user  
-has_many : users ,through: :group_user  
+has_many : users ,through: :group_users  
 has_many : messages
 
-#####group_user  
+#####group_users  
 belongs_to : groups  
 belongs_to :users  
 
