@@ -1,245 +1,224 @@
+@import "./variables";
 html{
-  width:100%;
+  width: 100%;
 }
 
 body {
-  // margin: 0;
-  // padding: 0;
-  // background-color: #ffffff; 
-  // color: #000000; 
-  // font-size: 100%; 
- 
 
   #header{
-    background-color:#38AEF0;
-   
-    height:28px;
-    width:100%;
+    background-color: $light-blue;
+
+    height: 28px;
+    width: 100%;
   }
-    p{
-      font-size: 18px;
-      color:white;
-      text-align: center;
-    }
+  p{
+    font-size: 18px;
+    color: $other-text-color;
+    text-align: center;
+  }
 
   #container{
-    width:100%;
-    position:fixed;
-   
-    height:872px;
+    width: 100%;
+    position: fixed;
+
+    height: 872px;
 
 
-   
+
 
     #side-content{
-      width:300px;
-      float:left;
-      height:100%;
-       background-color: #2f3e51;
-         
+      width: 300px;
+      float: left;
+      height: 100%;
+      background-color: $side-content-color;
+
       .user-info{
-        background-color:#253141;
-        height:100px;
+        background-color: #253141;
+        height: 100px;
 
         i.fa-cog{
           font-size: 20px;
-          color:white;
-          height:20px;
-          position:absolute;
-          padding:40px 0px 50px 260px;
-          float:left;
+          color: $other-text-color;
+          height: 20px;
+          position: absolute;
+          padding: 40px 0px 50px 260px;
+          float: left;
         }
         i.fa-pencil-square-o{
-           font-size: 20px;
-          color:white;
-          height:20px;
-          position:absolute;
-          padding:40px 0px 50px 230px;
-          float:left;
-        }
+         font-size: 20px;
+         color: $other-text-color;
+         height: 20px;
+         position: absolute;
+         padding: 40px 0px 50px 230px;
+         float: left;
+       }
 
-        .User-info__name{
-          font-size:16px;
-          height:20px;
-          width: 200px;
-          font-weight: bold;
-          color:#FFFFFF;
-          position:absolute;
-          margin :40px 100px 50px 20px;
-        }
+       .User-info__name{
+        font-size: 16px;
+        height: 20px;
+        width: 200px;
+        font-weight: bold;
+        color: $other-text-color;
+        position: absolute;
+        margin: 40px 100px 50px 20px;
       }
-      .groups{
-        height:100px;
-        width:300px;
-        color:#FFFFFF;
-        position:absolute;
-        
-        .group__name{
-          font-size: 15px;
-          padding:20px 200px 0px 20px;
+    }
+    .groups{
+      height: 100px;
+      width: 300px;
+      color: $other-text-color;
+      position: absolute;
+
+      .group__name{
+        font-size: 15px;
+        margin: 20px 200px 0px 20px;
 
 
-        }
-
-        .group__last__massage{
-          margin:3px 0 0 0 ;
-          font-size: 11px;
-          padding:0px 200px 40px 20px;
-
-        }
       }
-      
-      
+
+      .group__last__massage{
+        margin-top: 3px;
+        font-size: 11px;
+        padding: 0px 200px 40px 20px;
+
+      }
     }
 
-
-    #main-content{
-      
-      width:1140px;
-      height:100%;
-      float:left;
-    
-
-      .selected-group{
-        height:100px;
-        background-color: white;
-
-    
-        .selected-group__name{
-          font-size:20px;
-          width:100px;
-          height:20px;
-          color:#333333;
-          position:absolute;
-          margin:35px 0px 0px 40px;
-        }
-
-        .selected-group__members{
-          width:100%;
-          font-size: 12px;
-          color:#999999;
-          position:absolute;
-          margin:75px 0px 15px 40px;
-
-        }
-
-        .selected-group__edit-box{
-          height:40px;
-          width:68px;
-          margin:28px 20px 28px 1020px;
-          border:solid;
-          border-color:#38AEF0;
-          position:absolute;
-          font-weight:100;
-
-          .selected-group__edit-box__text{
-            color:#38AEF0;
-            font-size: 20px;
-            position:absolute;
-            margin: 5px 13px;
-            font-weight:200;
-          }
-        }
-
-      }
-
-      .message-area{
-        border:#eeeeee;
-        height:682px;
-        background-color: #F9F9F9;
-
-        .messages{
-          height:100px;
-          padding:40px 0px 40px 40px;
-
-          .message-info{
-            .message-info__owner{
-              font-size:16px;
-            font-weight: bold;
-            color:#434A54;
-            float:left;
-            }
-
-            .message-info__updated-time{
-              font-size:12px;
-            color:#999999;
-            float:left;
-            margin:3px 0px 0px 10px;
-            }
-            
-          }
-
-          .massage-content{
-            font-size: 14px;
-            color:#434A54;
-            margin:30px 0px 0px 0px ;
-            clear:left;
-          }
-
-          
-        }
-      
-      }
-
-      .massage-input{
-        height:90px;
-        background-color: #DCDCDC;
-
-
-        
-        textarea{
-          background-color: white;
-          position:absolute;
-          width:960px ;
-          height:50px ;
-          margin:20px 20px 20px 35px ;
-            color:#434A54;
-          font-size:16px;
-          text-align: left;
-          line-height: 50px;
-        }
-
-        i{
-            font-size: 17px;
-            float:left;
-            height:50px;
-            margin:35px 20px 10px 960px;
-            position:absolute;
-            z-index: 2;
-            color:#434A54;
-          }
-
-        .send-box{
-          background-color: #38AEF0;
-          height:50px;
-          width:100px;
-          margin:20px 20px 20px 1010px;
-          position:absolute;
-
-
-          .send-box__text{
-            font-size: 18px;
-            color:white;
-            position:absolute;
-            padding:10px 20px 10px 25px;
-          }
-
-          
-        }
-
-      }
-
-    }
-
-    // footer{
-    //   background-color: black;
-    //   clear:left;
-    //   height:30px;
-
-    // }
 
   }
 
+  #main-content{
+
+    width: 1140px;
+    height: 100%;
+    float: left;
+    
+    .selected-group{
+      height: 100px;
+      background-color: $base-color;
+
+      .selected-group__name{
+        font-size: 20px;
+        width: 100px;
+        height: 20px;
+        color: $main-text-color;
+        position: absolute;
+        margin: 35px 0px 0px 40px;
+      }
+
+      .selected-group__members{
+        width: 100%;
+        font-size: 12px;
+        color: $light-black;
+        position: absolute;
+        margin: 75px 0px 15px 40px;
+
+      }
+
+      .selected-group__edit-box{
+        height: 40px;
+        width: 68px;
+        margin: 28px 20px 28px 1020px;
+        border: solid;
+        border-color: #38AEF0;
+        position: absolute;
+        font-weight: 100;
+
+        .selected-group__edit-box__text{
+          color: $light-blue;
+          font-size: 20px;
+          position: absolute;
+          margin: 5px 13px;
+          font-weight: 200;
+        }
+      }
+
+    }
+
+    .message-area{
+      border: #eee;
+      height: 682px;
+      background-color: $message-area-color;
+
+      .messages{
+        height: 100px;
+        padding: 40px 0px 40px 40px;
+
+        .message-info{
+          .message-info__owner{
+           font-size: 16px;
+           font-weight: bold;
+           color: $main-text-color;
+           float: left;
+         }
+
+         .message-info__updated-time{
+          font-size: 12px;
+          color: $light-black;
+          float: left;
+          margin: 3px 0px 0px 10px;
+        }
+
+      }
+
+      .massage-content{
+        font-size: 14px;
+        color: $main-text-color;
+        margin-top: 30px;
+        clear: left;
+      }
+
+
+    }
+
+  }
+
+  .massage-input{
+    height: 90px;
+    background-color: #DCDCDC;
+
+    textarea{
+      background-color: $base-color;
+      position: absolute;
+      width: 960px;
+      height: 50px;
+      margin: 20px 20px 20px 35px;
+      color: $main-text-color;
+      font-size: 16px;
+      text-align: left;
+      line-height: 50px;
+    }
+
+    i{
+      font-size: 17px;
+      float: left;
+      height: 50px;
+      margin: 35px 20px 10px 960px;
+      position: absolute;
+      z-index: 2;
+      color: $main-text-color;
+    }
+
+    .send-box{
+      background-color: $light-blue;
+      height: 50px;
+      width: 100px;
+      margin: 20px 20px 20px 1010px;
+      position: absolute;
+
+      .send-box__text{
+        font-size: 18px;
+        color: $base-color;
+        position: absolute;
+        padding: 10px 20px 10px 25px;
+      }   
+    }
+
+  }
+
+}
+
+}
 
 }
 
