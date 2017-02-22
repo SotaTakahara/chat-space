@@ -1,13 +1,11 @@
-@import "./variables";
 html{
   width: 100%;
 }
 
-body {
+body{
 
   #header{
     background-color: $light-blue;
-
     height: 28px;
     width: 100%;
   }
@@ -20,11 +18,7 @@ body {
   #container{
     width: 100%;
     position: fixed;
-
     height: 872px;
-
-
-
 
     #side-content{
       width: 300px;
@@ -33,7 +27,7 @@ body {
       background-color: $side-content-color;
 
       .user-info{
-        background-color: #253141;
+        background-color: $user-info-color;
         height: 100px;
 
         i.fa-cog{
@@ -72,23 +66,17 @@ body {
       .group__name{
         font-size: 15px;
         margin: 20px 200px 0px 20px;
-
-
       }
 
       .group__last__massage{
         margin-top: 3px;
         font-size: 11px;
         padding: 0px 200px 40px 20px;
-
       }
     }
-
-
   }
 
   #main-content{
-
     width: 1140px;
     height: 100%;
     float: left;
@@ -112,7 +100,6 @@ body {
         color: $light-black;
         position: absolute;
         margin: 75px 0px 15px 40px;
-
       }
 
       .selected-group__edit-box{
@@ -120,7 +107,7 @@ body {
         width: 68px;
         margin: 28px 20px 28px 1020px;
         border: solid;
-        border-color: #38AEF0;
+        border-color: $light-blue;
         position: absolute;
         font-weight: 100;
 
@@ -132,11 +119,10 @@ body {
           font-weight: 200;
         }
       }
-
     }
 
     .message-area{
-      border: #eee;
+      border: $border;
       height: 682px;
       background-color: $message-area-color;
 
@@ -158,7 +144,6 @@ body {
           float: left;
           margin: 3px 0px 0px 10px;
         }
-
       }
 
       .massage-content{
@@ -167,15 +152,12 @@ body {
         margin-top: 30px;
         clear: left;
       }
-
-
     }
-
   }
 
   .massage-input{
     height: 90px;
-    background-color: #DCDCDC;
+    background-color: $message-input-area-color;
 
     textarea{
       background-color: $base-color;
@@ -211,14 +193,10 @@ body {
         color: $base-color;
         position: absolute;
         padding: 10px 20px 10px 25px;
-      }   
+      }
     }
-
   }
-
 }
-
 }
-
 }
 
