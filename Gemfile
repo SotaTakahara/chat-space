@@ -58,3 +58,5 @@ gem "font-awesome-rails"
 gem 'font-awesome-sass'
 
 gem "erb2haml", :group => :development
+
+gem 'devise'
