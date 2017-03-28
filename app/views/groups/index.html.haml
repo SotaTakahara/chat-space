@@ -10,6 +10,7 @@
       .user-info
         .User-info__name Sota Takahara
         %i{class:"fa fa-cog"}
+          = link_to 'ログアウト', destroy_user_session_path, method: :delete
         %i{class:"fa fa-pencil-square-o"}
 
       .groups
