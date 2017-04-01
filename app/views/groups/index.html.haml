@@ -8,7 +8,8 @@
     #side-content
       .user-info
         .User-info__name 
-          Sota Takahara
+          %span
+          = current_user.name
         = link_to edit_user_registration_path do
           %i.fa.fa-cog
         %i.fa.fa-pencil-square-o
