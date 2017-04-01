@@ -11,7 +11,7 @@
           Sota Takahara
         = link_to edit_user_registration_path do
           %i.fa.fa-cog
-        %i{class:"fa fa-pencil-square-o"}
+        %i.fa.fa-pencil-square-o
       .groups
         .group__name SotaTakahara
         .group__last__massage プログラミング難しい
@@ -22,17 +22,18 @@
 
         .selected-group__members Members : sotatakahara
 
-        .selected-group__edit-box
+        .selected-group__edit-box 
           .selected-group__edit-box__text Edit
-      .message-area
+      .message-area 
         .messages 
           .message-info
             .message-info__owner SotaTakahara
             .message-info__updated-time 2017/2/6 22:45:30
           .massage-content プログラミング難しい
       .massage-input
-        %textarea{placeholder: '  type a message'}
-        %i{class:"fa fa-image"}
+        %textarea.placeholder
+          type a message
+        %i.fa.fa-image
         .send-box
           .send-box__text Send
 
