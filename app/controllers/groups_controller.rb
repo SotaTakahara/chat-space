@@ -12,7 +12,16 @@ class GroupsController < ApplicationController
     Group.create(name: group_params[:name])
     redirect_to action: :index 
   end
+
+  def edit
+    @group = Group.find(params[:id])
+  end
   
+  def update
+    group = Group.find(params[:id])
+    group.update(group_params)
+    redirect_to root_path
+  end
   private
 
    def group_params
