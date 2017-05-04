@@ -71,12 +71,12 @@ has_many : users ,through: :group_users
 has_many : messages
 
 #####group_users  
-belongs_to : groups  
-belongs_to :users  
+belongs_to : group  
+belongs_to :user  
 
 ####messages  
-belongs_to : users  
-belongs_to : groups  
+belongs_to : user  
+belongs_to : group  
 
 
 
