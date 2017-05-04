@@ -4,7 +4,11 @@ html{
 
 body{
 
- 
+  #header{
+    background-color: $light-blue;
+    height: 28px;
+    width: 100%;
+  }
   p{
     font-size: 18px;
     color: $other-text-color;
@@ -53,27 +57,24 @@ body{
         margin: 40px 100px 50px 20px;
       }
     }
-    ul.groups{
+    .groups{
       height: 100px;
       width: 300px;
+      color: $other-text-color;
       position: absolute;
 
-      li.group{
-        color: $other-text-color;
-
-        .group__name{
+      .group__name{
         font-size: 15px;
         margin: 20px 200px 0px 20px;
       }
-        .group__last__massage{
+
+      .group__last__massage{
         margin-top: 3px;
         font-size: 11px;
         padding: 0px 200px 40px 20px;
       }
     }
   }
-}
-
 
   #main-content{
     width: 1140px;
