@@ -25,7 +25,10 @@
       .selected-group
         .selected-group__name 
           = @group.name
-        .selected-group__members Members : sotatakahara
+        .selected-group__members 
+          Members : 
+          - @users.each do |user|
+            = user.name
 
         .selected-group__edit-box 
           - @groups.each do |group|
