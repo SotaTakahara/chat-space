@@ -31,9 +31,8 @@
             = user.name
 
         .selected-group__edit-box 
-          - @groups.each do |group|
-            = link_to edit_group_path(group) do
-              .selected-group__edit-box__text Edit
+          = link_to edit_group_path(@group) do
+            .selected-group__edit-box__text Edit
       .message-area 
         .messages 
           .message-info
