@@ -34,15 +34,27 @@
           = link_to edit_group_path(@group) do
             .selected-group__edit-box__text Edit
       .message-area 
-        .messages 
-          .message-info
-            .message-info__owner SotaTakahara
-            .message-info__updated-time 2017/2/6 22:45:30
-          .massage-content プログラミング難しい
-      .massage-input
-        %textarea.placeholder
-          type a message
-        %i.fa.fa-image
-        .send-box
-          .send-box__text Send
+        %ul.messages
+          - @messages.each do |message|
+            %li.message
+              .message-info
+                .message-info__owner 
+                  = message.user.name
+                .message-info__updated-time 
+                  = message.created_at
+              .message-content
+                = message.text
+      .message-input
+        = form_for [@group,@message] do |f|
+          .message-input_area 
+            = f.text_area :text, placeholder:"type a message"
+            %i.fa.fa-picture-o.fa-lg{"aria-hidden" => "true"}
+          / %i.fa.fa-image
+          = f.submit "Send", class: "send-box"
+  %footer
+
+
+/           .send-box
+/             = f.submit "send", name: "commit", type: "submit", class: "message-send-button"
+/ z
 
