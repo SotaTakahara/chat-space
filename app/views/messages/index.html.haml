@@ -6,7 +6,7 @@
   #container
     #side-content
       .user-info
-        .User-info__name 
+        .User-info__name
           %span 
             = current_user.name
         = link_to edit_user_registration_path do
@@ -29,32 +29,17 @@
           Members : 
           - @users.each do |user|
             = user.name
-
         .selected-group__edit-box 
           = link_to edit_group_path(@group) do
             .selected-group__edit-box__text Edit
-      .message-area 
+      .message-area
         %ul.messages
-          - @messages.each do |message|
-            %li.message
-              .message-info
-                .message-info__owner 
-                  = message.user.name
-                .message-info__updated-time 
-                  = message.created_at
-              .message-content
-                = message.text
+          = render partial: 'message', collection: @messages, as: 'message'
       .message-input
         = form_for [@group,@message] do |f|
           .message-input_area 
             = f.text_area :text, placeholder:"type a message"
-            %i.fa.fa-picture-o.fa-lg{"aria-hidden" => "true"}
-          / %i.fa.fa-image
+          %i.fa.fa-picture-o.fa-lg{"aria-hidden" => "true"}
           = f.submit "Send", class: "send-box"
   %footer
-
-
-/           .send-box
-/             = f.submit "send", name: "commit", type: "submit", class: "message-send-button"
-/ z
 

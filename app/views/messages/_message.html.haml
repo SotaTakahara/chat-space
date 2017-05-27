@@ -1,0 +1,8 @@
+%li.message
+  .message-info
+    .message-info__owner 
+      = message.user.name
+    .message-info__updated-time 
+      = message.created_at
+  .message-content
+    = message.text
