@@ -36,10 +36,10 @@
         %ul.messages
           = render partial: 'message', collection: @messages, as: 'message'
       .message-input
-        = form_for [@group,@message] do |f|
+        = form_for [@group, @message] do |f|
           .message-input_area 
             = f.text_area :text, placeholder:"type a message"
-          %i.fa.fa-picture-o.fa-lg{"aria-hidden" => "true"}
+          %i.fa.fa-picture-o.fa-lg{aria: {hidden: true}}
           = f.submit "Send", class: "send-box"
   %footer
 
