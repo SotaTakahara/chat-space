@@ -1,32 +1,32 @@
-html{
+html {
   width: 100%;
 }
 
-body{
+body {
 
- 
-  p{
+
+  p {
     font-size: 18px;
     color: $other-text-color;
     text-align: center;
   }
 
-  #container{
+  #container {
     width: 100%;
     position: fixed;
     height: 872px;
 
-    #side-content{
+    #side-content {
       width: 300px;
       float: left;
       height: 100%;
       background-color: $side-content-color;
 
-      .user-info{
+      .user-info {
         background-color: $user-info-color;
         height: 100px;
 
-        i.fa-cog{
+        i.fa-cog {
           font-size: 20px;
           color: $other-text-color;
           height: 20px;
@@ -34,7 +34,7 @@ body{
           padding: 40px 0px 50px 260px;
           float: left;
         }
-        i.fa-pencil-square-o{
+        i.fa-pencil-square-o {
          font-size: 20px;
          color: $other-text-color;
          height: 20px;
@@ -43,7 +43,7 @@ body{
          float: left;
        }
 
-       .User-info__name{
+       .User-info__name {
         font-size: 16px;
         height: 20px;
         width: 200px;
@@ -53,38 +53,37 @@ body{
         margin: 40px 100px 50px 20px;
       }
     }
-    ul.groups{
+    ul.groups {
       height: 100px;
       width: 300px;
       position: absolute;
 
-      li.group{
+      li.group {
         color: $other-text-color;
 
-        .group__name{
-        font-size: 15px;
-        margin: 20px 200px 0px 20px;
-      }
-        .group__last__massage{
-        margin-top: 3px;
-        font-size: 11px;
-        padding: 0px 200px 40px 20px;
+        .group__name {
+          font-size: 15px;
+          margin: 20px 200px 0px 20px;
+        }
+        .group__last__massage {
+          margin-top: 3px;
+          font-size: 11px;
+          padding: 0px 200px 40px 20px;
+        }
       }
     }
   }
-}
 
-
-  #main-content{
-    width: 1140px;
+  #main-content {
+    width: calc(100vw - 300px);
     height: 100%;
     float: left;
-    
-    .selected-group{
+
+    .selected-group {
       height: 100px;
       background-color: $base-color;
 
-      .selected-group__name{
+      .selected-group__name {
         font-size: 20px;
         width: 100px;
         height: 20px;
@@ -93,7 +92,7 @@ body{
         margin: 35px 0px 0px 40px;
       }
 
-      .selected-group__members{
+      .selected-group__members {
         width: 100%;
         font-size: 12px;
         color: $light-black;
@@ -101,7 +100,7 @@ body{
         margin: 75px 0px 15px 40px;
       }
 
-      .selected-group__edit-box{
+      .selected-group__edit-box {
         height: 40px;
         width: 68px;
         margin: 28px 20px 28px 1020px;
@@ -110,7 +109,7 @@ body{
         position: absolute;
         font-weight: 100;
 
-        .selected-group__edit-box__text{
+        .selected-group__edit-box__text {
           color: $light-blue;
           font-size: 20px;
           position: absolute;
@@ -120,82 +119,80 @@ body{
       }
     }
 
-    .message-area{
+    .message-area {
       border: $border;
-      height: 682px;
+      height: calc(100vh - 190px);
       background-color: $message-area-color;
 
-      .messages{
+      ul.messages  {
         height: 100px;
         padding: 40px 0px 40px 40px;
 
-        .message-info{
-          .message-info__owner{
-           font-size: 16px;
-           font-weight: bold;
-           color: $main-text-color;
-           float: left;
-         }
+        li.message {
 
-         .message-info__updated-time{
-          font-size: 12px;
-          color: $light-black;
-          float: left;
-          margin: 3px 0px 0px 10px;
+          .message-info {
+            .message-info__owner {
+             font-size: 16px;
+             font-weight: bold;
+             color: $main-text-color;
+             float: left;
+           }
+
+           .message-info__updated-time {
+            font-size: 12px;
+            color: $light-black;
+            float: left;
+            margin: 3px 0px 0px 10px;
+          }
+        }
+        .message-content {
+          font-size: 14px;
+          color: $main-text-color;
+          margin-top: 30px;
+          clear: left;
         }
       }
-
-      .massage-content{
-        font-size: 14px;
-        color: $main-text-color;
-        margin-top: 30px;
-        clear: left;
-      }
     }
+
   }
-
-  .massage-input{
+  .message-input {
     height: 90px;
-    background-color: $message-input-area-color;
+    background-color:$message-input-area-color;
 
-    textarea{
+    .message-input_area {
       background-color: $base-color;
       position: absolute;
-      width: 960px;
+      width: calc(100% - 500px);
       height: 50px;
-      margin: 20px 20px 20px 35px;
+      margin: 20px 20px 0px 35px;
       color: $main-text-color;
       font-size: 16px;
       text-align: left;
       line-height: 50px;
-    }
 
-    i{
-      font-size: 17px;
-      float: left;
-      height: 50px;
-      margin: 35px 20px 10px 960px;
-      position: absolute;
-      z-index: 2;
-      color: $main-text-color;
-    }
-
-    .send-box{
-      background-color: $light-blue;
-      height: 50px;
-      width: 100px;
-      margin: 20px 20px 20px 1010px;
-      position: absolute;
-
-      .send-box__text{
-        font-size: 18px;
-        color: $base-color;
-        position: absolute;
-        padding: 10px 20px 10px 25px;
+      textarea {
+        width:100%;
       }
+
+    }
+
+    i.fa.fa-picture-o.fa-lg {
+        position: absolute; 
+        right: 200px;
+        margin-top: 35px;
+        color: $light-black
+      }
+
+      .send-box {
+        background-color: $light-blue;
+        height: 50px;
+        width: 100px;
+        margin: 20px 20px 20px ;
+        position:absolute;
+        right: 30px;
+        color: $other-text-color;
     }
   }
 }
 }
 }
-
