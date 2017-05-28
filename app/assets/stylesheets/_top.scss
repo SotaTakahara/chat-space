@@ -177,20 +177,18 @@ body{
 
     }
 
-i.fa.fa-picture-o.fa-lg{
-        position: absolute; 
-        // margin-left: 950px;
+    i.fa.fa-picture-o.fa-lg{
+      position: absolute; 
         right: 200px;
         margin-top: 35px;
         color: $light-black
       }
 
-    .send-box{
-      background-color: $light-blue;
-      height: 50px;
-      width: 100px;
-      margin: 20px 20px 20px 1000px;
-      // send をposition right とかでmarginに依存させずに書く
+      .send-box{
+        background-color: $light-blue;
+        height: 50px;
+        width: 100px;
+        margin: 20px 20px 20px ;
       position:absolute;
       right: 30px;
       color: $other-text-color;
