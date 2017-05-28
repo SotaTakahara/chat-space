@@ -13,10 +13,9 @@
   def create
     @message = current_user.messages.new(message_params)
      if @message.save
-       redirect_to group_messages_path(@group.id)
+       redirect_to group_messages_path(@group)
      else
-       flash.now[:alert] = "送信したいメッセージがありません。"
-       render :index
+       redirect_to group_messages_path(@group),alert: '送信したいメッセージがありません。'
      end
   end
 
