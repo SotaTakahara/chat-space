@@ -27,13 +27,15 @@
   private
 
   def message_params
-    params.require(:message).permit(:text).merge(group_id: params[:group_id],user_id: current_user.id)
+    params.require(:message).permit(:text).merge(group_id: params[:group_id])
   end
 
   def often_time_used
     @group = Group.find(params[:group_id])
     @groups = current_user.groups
     @users = @group.users
+    @message = Message.new
+    @messages = @group.messages
   end
 
   end

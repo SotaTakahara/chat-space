@@ -126,7 +126,7 @@ body {
 
       ul.messages  {
         height: 100px;
-        padding: 40px 0px 40px 40px;
+        padding: 40px 0px 10px 40px;
 
         li.message {
 
@@ -151,9 +151,9 @@ body {
           margin-top: 30px;
           clear: left;
         }
+
       }
     }
-
   }
   .message-input {
     height: 90px;
