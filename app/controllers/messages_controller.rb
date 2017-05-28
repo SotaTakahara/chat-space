@@ -13,9 +13,9 @@
   def create
     @message = current_user.messages.new(message_params)
      if @message.save
-       redirect_to group_messages_path(@group)
+       redirect_to group_messages_url(@group)
      else
-       redirect_to group_messages_path(@group),alert: '送信したいメッセージがありません。'
+       redirect_to group_messages_url(@group), alert: '送信したいメッセージがありません。'
      end
   end
 
